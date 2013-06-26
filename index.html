@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <title>Ooyala TS Escalation Template</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="jqueryscript.js" type="text/javascript"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="escform">
+            <ul>
+                <li>
+                    <label for="pid">Provider Id</label>
+                    <input type="text" name="pid" id="pid"/>
+                </li>
+                <li>
+                    <label for="login">Login</label>
+                    <input type="text" name="login" id="login"/>
+                </li>
+                <li>
+
+                    <label for="atype">Account Type</label>
+                    <select name="atype" id="atype">
+                        <option>Trial</option>
+                        <option>Demo</option>
+                        <option>Publisher</option>
+                        <option>Standard</option>
+                        <option>Professional Lite</option>
+                        <option>Professional</option>
+                        <option>Enterprise</option>
+                    </select>
+                </li>
+                <li id="embedca">
+                    <label for="embed">Embed Code</label>
+                    <img src="imgs/add.png" alt="Add another embedCode" id="addbtn"/><br />
+                    <input class="embedta" type="text" name="embed" id="embed1"/>
+                </li>
+                <li>
+                    <label for="clink">Customer Link</label>
+                    <input type="text" name="clink" id="clink"/>
+                </li>
+                <li>
+                    <label for="slink">Support Link</label>
+                    <input type="text" name="slink" id="slink"/>
+                </li>
+                <li>
+                    <label for="preq">Prerequisites</label></br>
+                    <textarea rows="5" cols="65" name="preq" id="preq"/></textarea>
+                </li>
+                <li>
+                    <label for="steps">Steps to Reproduce</label></br>
+
+                    <textarea rows="5" cols="65" name="steps" id="steps"/></textarea>
+                </li>
+                <li>
+                    <label for="actr">Actual Results</label></br>
+                    <textarea rows="5" cols="65" name="actr" id="actr"/></textarea>
+                </li>
+                <li>
+
+                    <label for="specr">Expected Results</label></br>
+                    <textarea rows="5" cols="65" id="specr"/></textarea>
+                </li>
+                <li>
+                    <label for="obs">Observations</label></br>
+                    <textarea rows="5" cols="65" id="obs"/></textarea>
+                </li>
+                
+            </ul>
+            <button id="btngen" >Generate</button> 
+            <button id="btnclean" >Clean Form</button>
+            
+        </div>
+        <div id="escgen">
+            <textarea id="tareagen" rows="35" cols="72"/>
+            </textarea>
+
+        </div>
+        </div>
+    </div>
+</body>
+</html>
