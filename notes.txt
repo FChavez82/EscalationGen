@@ -1,0 +1,14 @@
+var form = "SUPPORT FINDINGS \n" + "\n" +
+    "Key Information \n" + 
+    "- ProviderId = " +  pid + "\n" +
+    "- Login = " + login + "\n" +
+    "- Account Type = " + atype + "\n" +
+    "- embedCode(s) = " + embcodes + "\n" + "\n" +
+    "- Customer Link Manifesting = " + clink + "\n" +
+    "- Support Link Manifesting = " + slink + "\n" + "\n" +
+    "- Prerequisites \n" + preq + "\n" + "\n" +
+    "- Steps to Reproduce \n" + steps + "\n" + "\n" +
+    "- Actual Results \n" + actr + "\n" + "\n" +
+    "- Expected Results \n" + specr + "\n" + "\n" +
+    "- Observations \n" + obs + "\n" + "\n";
+$("#tareagen").val(form);

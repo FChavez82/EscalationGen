@@ -6,24 +6,110 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="jqueryscript.js" type="text/javascript"></script>
     <script src="jquery.js" type="text/javascript"></script>
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+	
+
 </head>
 <body>
     <div id="main">
         <div id="escform">
+			<h2>General Information</h2></br>
 			<ul>
 				<li>
-					<h2>General Information</h2></br>
-					<label>Provider Id: </label>
 					<div class='mandatory'></div>
-					<input type=text></input>
-					</br>
+					<label>Provider Id: </label>
+					<input type=text size='35' name='provider_id' id='provider_id'></input>
+				</li>
+				<li>
+					<div class='mandatory'></div>
 					<label>Account Login: </label>
-					</label>Account Type: </label>
-					</label>Embed Code: </label>
+					<input type=text size='35' name='account_login' id='account_login'></input>
+				</li>
+				<li>
+					<div class='mandatory'></div>
+					<label>Account Type: </label>
+					<input type=text size='35' name='account_type' id='account_type'></input>
+				</li>
+				<li>
+					<div class='mandatory'></div>
+					<label>Embed Code: </label>
+					<input type=text size='35' name='embed_code' id='embed_code'></input>
+				</li>
+				<li>
+					<select id='escalation_form'>
+					  <option value="general">General Escalation</option>
+					  <option value="pbissue">PB - Playback Issue</option>
+					  <option value="pbsdk">PB - SDK Issue</option>
+					  <option value="pbperformance">PB - Performance Issue</option>
+					  <option value="pbmonetization">PB - Monetization Issue</option>
+					</select>
 				</li>
 			</ul>
-               
+			<div id='escalation_fields'>
+				<ul>
+					<li id='customer_manifesting_link_li'>
+						<label>Customer Manifesting Link: </label>
+						<input type=text size='35' name='customer_manifesting_link' id='customer_manifesting_link'></input>
+					</li>
+					<li id='support_manifesting_link_li'>
+						<label>Support Manifesting Link: </label>
+						<input type=text size='35' name='support_manifesting_link' id='support_manifesting_link'></input>
+					</li>
+					<li id='eng_tool_link_li'>
+						<label>Engineering Tools Link: </label>
+						<input type=text size='35' name='engineering_tools_link' id='engineering_tools_link'></input>
+					</li>
+					<li id='manifesting_devices_li'>
+						<label>Manifesting Device(s), Platform(s) and/or Browser(s): </label>
+						<textarea rows="5" cols="65" name='manifesting_devices' id='manifesting_devices' placeholder='iPhone, iPad, Android | PC, Windows Version, MacOSX, | Chrome 13.0.2, Firefox 16, etc.'></textarea>
+					</li>
+					<li id='player_platform_li'>
+						<label>Player Platform </label></br>
+						<input type="checkbox"  id="player_v2">Player V2</input></br>
+						<input type="checkbox"  id="player_v3_flash">Player V3 Flash</input></br>
+						<input type="checkbox"  id="player_v3_html5">Player V3 HTML5</input></br>
+					</li>
+					<li id='sample_sdk_li'>
+						<span>Include a customer Sample Application in the JIRA case</span></br>
+						<span>Ensure that the customer is using the latest version of the SDK</span>
+					</li>
+					<li id='player_logs_li'>
+						<span>Include Player Debug Console in the JIRA case</span></br>
+						<span>Include HAR logs in the JIRA case</span>
+					</li>
+					<li id='ad_tag_li'>
+						<label>Ad Tag URL: </label>
+						<input type=text size='35' name='ad_tag' id='ad_tag'></input>
+					</li>
+				</ul>
+			</div>
+				<ul>
+					<li>
+						<label>Prerequisites: </label></br>
+						<textarea rows="5" cols="65" name='prerequisites' id='prerequisites' placeholder='This is the placeholder!'></textarea>
+					</li>
+					<li>
+						<label>Steps to Reproduce: </label></br>
+						<textarea rows="5" cols="65" name='steps_to_reproduce' id='steps_to_reproduce' placeholder='Numbered List on how to replicate the issue'></textarea>
+					</li>
+					<li>
+						<label>Actual Results: </label></br>
+						<textarea rows="5" cols="65" name='actual_results' id='actual_results' placeholder='Concrete issue description'></textarea>
+					</li>
+					<li>
+						<label>Expected Results: </label></br>
+						<textarea rows="5" cols="65" name='expected_results' id='expected_results' placeholder='What is the correct behavior we are expecting'></textarea>
+					</li>
+					<li>
+						<label>Observations: </label></br>
+						<textarea rows="5" cols="65" name='observations' id='observations' placeholder='Other important details'></textarea>
+					</li>
+				</ul>
+			</ul>
         </div>
+
+
         <div id="escgen">
             <textarea id="tareagen" rows="35" cols="72"/>
             </textarea>
